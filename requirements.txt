@@ -1,0 +1,10 @@
+# Interface da tela de abertura
+PyQt6>=6.4
+
+# Checklist: exportação e manipulação de dados
+pandas>=2.0
+openpyxl>=3.1      # necessário para o pandas exportar .xlsx
+reportlab>=4.0     # exportação para PDF
+
+# Observação: tkinter e sqlite3 já vêm com o Python (não são instalados via pip).
+# No Linux, se faltar o tkinter: sudo apt install python3-tk
