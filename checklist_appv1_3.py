@@ -26,7 +26,7 @@ class ChecklistApp:
 
     def __init__(self, root):
         self.root = root
-        self.root.title("Gerenciador de Checklists")
+        self.root.title("Gerenciador de Checklists - e-ST Software")
         self.root.geometry("820x550")  # Aumentado para acomodar os novos botões
         self.root.protocol("WM_DELETE_WINDOW", self.on_close)
 
@@ -456,20 +456,20 @@ class ChecklistApp:
         # Pop-up de Transferência
         dialog = tk.Toplevel(self.root)
         dialog.title("Transferir Tarefa")
-        dialog.geometry("380x160")
+        dialog.geometry("520x160")
         dialog.transient(self.root)
         dialog.grab_set()
 
         ttk.Label(
             dialog,
-            text=f"Transferir: '{task_desc[:30]}...'",
+            text=f"Transferir: '{task_desc[:65]}...'",
             font=("Helvetica", 9, "bold"),
         ).pack(pady=(15, 5))
         ttk.Label(dialog, text="Selecione o checklist de destino:").pack(pady=2)
 
         checklist_dict = {f"{c[1]} (ID: {c[0]})": c[0] for c in other_checklists}
         combo = ttk.Combobox(
-            dialog, values=list(checklist_dict.keys()), state="readonly", width=35
+            dialog, values=list(checklist_dict.keys()), state="readonly", width=55
         )
         combo.pack(pady=5)
         combo.current(0)
