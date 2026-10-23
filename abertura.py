@@ -27,7 +27,7 @@ IMAGEM_SPLASH = "splash_screen.png"
 TEMPO_MINIMO_MS = 4000
 
 
-def abrir_checklist():
+def abrir_programa():
     """Importa e executa o checklist (Tkinter)."""
     import checklist_appv1_3
     checklist_appv1_3.main()
@@ -41,7 +41,7 @@ def iniciar_sistema():
         from PyQt6.QtWidgets import QApplication, QMessageBox, QSplashScreen
     except ImportError:
         print("PyQt6 não encontrado - iniciando sem tela de abertura.")
-        abrir_checklist()
+        abrir_programa()
         return
 
     app = QApplication(sys.argv)
@@ -101,7 +101,7 @@ def iniciar_sistema():
     del app
 
     # 4. Abre o sistema principal
-    abrir_checklist()
+    abrir_programa()
 
 
 if __name__ == "__main__":
