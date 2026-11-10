@@ -255,7 +255,7 @@ class ChecklistApp:
         frame_input = ttk.Frame(self.root, padding="10")
         frame_input.pack(fill=tk.X, padx=10)
 
-        self.entry_task = ttk.Entry(frame_input, width=40)
+        self.entry_task = ttk.Entry(frame_input, width=80)
         self.entry_task.pack(side=tk.LEFT, padx=(0, 5))
         self.entry_task.bind("<Return>", lambda e: self.add_task())
 

@@ -29,8 +29,8 @@ TEMPO_MINIMO_MS = 4000
 
 def abrir_programa():
     """Importa e executa o checklist (Tkinter)."""
-    import checklist_appv1_3
-    checklist_appv1_3.main()
+    import checklist_appv1_4
+    checklist_appv1_4.main()
 
 
 def iniciar_sistema():
